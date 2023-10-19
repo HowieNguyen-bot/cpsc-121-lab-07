@@ -1,18 +1,15 @@
-// TODO: Add the required header
-
-//
-// Program to calculate the date between two Gregorian dates.
-//
+// Howell Nguyen
+// 27hnguyen@csu.fullerton.edu
+// @HowieNguyen-bot
+// Partners: @AMartinez025
 
 #include <iostream>
 
 #ifndef DATEDIFF_FUNCTIONS
 #define DATEDIFF_FUNCTIONS
 
-// TODO: Write the function prototype for JulianDay
-
-// TODO: Write the function prototype for DateDifference
-
-// TODO: Write the function prototype for PrintDate
-
+int JulianDay(int month, int day, int year);
+int DateDifference(int start_month, int start_day, int start_year,
+                   int end_month, int end_day, int end_year);
+void PrintDate(int month, int day, int year);
 #endif
