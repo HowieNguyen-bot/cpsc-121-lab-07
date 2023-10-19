@@ -1,35 +1,49 @@
-// TODO: Add the required header
+// Howell Nguyen
+// 27hnguyen@csu.fullerton.edu
+// @HowieNguyen-bot
+// Partners: @AMartinez025
 
 #include "parking_functions.h"
 
 bool CanParkOnAsh(const std::string& day, int hour) {
-  // TODO: Write an if statement that returns true when parking is allowed on
-  // Ash Street, or false otherwise.
-  // HINT: The if statement needs a compound Boolean expression with multiple
-  // && operators.
-  return false;
+    if (day == "wed" && hour >= 10 && hour <= 12) {
+    return false;
+    }
+    return true;
 }
 
 bool CanParkOnBeech(const std::string& day, int hour) {
-  // TODO: Write an if statement that returns true when parking is allowed on
-  // Beech Street, or false otherwise.
+  if (day == "fri" && hour >= 8 && hour <= 12) {
   return false;
+  }
+  return true;
 }
-
 bool CanParkOnCedar(const std::string& day, int hour) {
-  // TODO: Write an if statement that returns true when parking is allowed on
-  // Cedar Street, or false otherwise.
+  if (hour >= 7 && hour >= 19) {
+    return false;
+  } else if (day == "tue" && hour >= 8 && hour <= 10){
   return false;
+  }
+  return true;
 }
 
 bool CanParkOnDate(const std::string& day, int hour, int min) {
-  // TODO: Write an if statement that returns true when parking is allowed on
-  // Date Street, or false otherwise.
+  if (hour >= 6 && min >= 30 && hour <= 16) {
+    if (day == "sat" || day == "sun") {
+      return true;
+    }
+    return false;
+  }
   return false;
 }
 
 bool CanParkOnElm(const std::string& day, int hour) {
-  // TODO: Write an if statement that returns true when parking is allowed on
-  // Elm Street, or false otherwise.
-  return false;
+  if (day == "mon" && day == "wed" && day == "thu" && hour >= 8 && hour <= 20) {
+    return false;
+  } else if (day == "tue") {
+    return false;
+  } else if (day == "fri" && hour >= 8 && hour <= 17) {
+    return false;
+  }
+  return true;
 }

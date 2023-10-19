@@ -1,4 +1,7 @@
-// TODO: Add the required header
+// Howell Nguyen
+// 27hnguyen@csu.fullerton.edu
+// @HowieNguyen-bot
+// Partners: @AMartinez025
 
 #ifndef PARKING_FUNCTIONS_H
 #define PARKING_FUNCTIONS_H
@@ -17,7 +20,6 @@
 // hour must be the hour number using 24-hour notation (military time),
 // so 7 means 7 AM and 19 means 7 PM.
 bool CanParkOnAsh(const std::string& day, int hour);
-
 // Returns true if parking is allowed on Beech Street at the given time, or
 // false otherwise.
 //
