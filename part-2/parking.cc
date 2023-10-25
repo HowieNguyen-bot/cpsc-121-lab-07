@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
   // the number of arguments is invalid, print
   // error: you must supply four arguments
   // and return non-zero.
-  if (argument.size() != 5) {
+  if (arguments.size() != 5) {
     std::cout << "error: you must supply four arguments";
     return 1;
   }
@@ -29,16 +29,17 @@ int main(int argc, char* argv[]) {
   // TODO: declare an int variable to hold the third argument (hour)
   // HINT: use the std::stoi function to convert the string argument to an int.
   std::string hour;
-  hour = std::stoi(argument.at(3));
+  hour = std::stoi(arguments.at(3));
   // TODO: declare an int variable to hold the fourth argument (minute)
   // HINT: use the std::stoi function to convert the string argument to an int.
   std::string minute;
-  minute = std::stoi(argument.at(4));
+  minute = std::stoi(arguments.at(4));
   // TODO: write an if statement that validates the street.
   // If the street is invalid, print
   // error: invalid street
   // and return non-zero.
-  if (street != "ash" && street != "beech" && street != "cedar" && street != "date" && street != "elm") {
+  if (street != "ash" && street != "beech" && street != "cedar" &&
+      street != "date" && street != "elm") {
     std::cout << "error: invalid street\n";
     return 1;
   }
@@ -46,7 +47,8 @@ int main(int argc, char* argv[]) {
   // If the day is invalid, print
   // error: invalid day
   // and return non-zero.
-  if (day != "mon" && day != "tue" && day != "wed" && day != "thu" && day != "fri" && day != "sat" && day != "sun") {
+  if (day != "mon" && day != "tue" && day != "wed" && day != "thu" &&
+      day != "fri" && day != "sat" && day != "sun") {
     std::cout << "error: invalid day\n";
     return 1;
   }
@@ -68,7 +70,7 @@ int main(int argc, char* argv[]) {
   }
   // TODO: Declare a bool variable that will store true when parking is
   // allowed, or false when not allowed.
-  bool parking {true};
+  bool parking{true};
   // TODO: write an if-else-chain that uses the day to decide which
   // function to call (CanParkOnAsh, etc.)
   // Call the chosen function, and assign the return value into your bool
@@ -79,14 +81,14 @@ int main(int argc, char* argv[]) {
     parking = CanParkOnBeech(day, hour);
   } else if (street == "cedar") {
     parking = CanParkOnCedar(day, hour);
-  } else if (street == date) {
-    parking = CanParkOnDate (day, hour, min);
+  } else if (street == "date") {
+    parking = CanParkOnDate(day, hour, minute);
   } else if (street == "elm") {
     parking = CanParkOnElm(day, hour);
   }
   // TODO: Write an if statement that prints
   // allowed
-  // or 
+  // or
   // not allowed
   // according to the value in your bool variable.
   if (parking == true) {

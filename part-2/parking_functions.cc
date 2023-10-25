@@ -6,23 +6,23 @@
 #include "parking_functions.h"
 
 bool CanParkOnAsh(const std::string& day, int hour) {
-    if (day == "wed" && hour >= 10 && hour <= 12) {
+  if (day == "wed" && hour >= 10 && hour <= 12) {
     return false;
-    }
-    return true;
+  }
+  return true;
 }
 
 bool CanParkOnBeech(const std::string& day, int hour) {
   if (day == "fri" && hour >= 8 && hour <= 12) {
-  return false;
+    return false;
   }
   return true;
 }
 bool CanParkOnCedar(const std::string& day, int hour) {
   if (hour >= 7 && hour >= 19) {
     return false;
-  } else if (day == "tue" && hour >= 8 && hour <= 10){
-  return false;
+  } else if (day == "tue" && hour >= 8 && hour <= 10) {
+    return false;
   }
   return true;
 }
