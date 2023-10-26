@@ -28,11 +28,11 @@ int main(int argc, char* argv[]) {
   day = arguments.at(2);
   // TODO: declare an int variable to hold the third argument (hour)
   // HINT: use the std::stoi function to convert the string argument to an int.
-  std::string hour;
+  int hour{0};
   hour = std::stoi(arguments.at(3));
   // TODO: declare an int variable to hold the fourth argument (minute)
   // HINT: use the std::stoi function to convert the string argument to an int.
-  std::string minute;
+  int minute{0};
   minute = std::stoi(arguments.at(4));
   // TODO: write an if statement that validates the street.
   // If the street is invalid, print
@@ -56,7 +56,7 @@ int main(int argc, char* argv[]) {
   // If the hour is invalid, print
   // error: invalid hour
   // and return non-zero.
-  if (hour < 0 && hour > 24) {
+  if (hour < 0 || hour > 24) {
     std::cout << "error: invalid hour\n";
     return 1;
   }
@@ -64,7 +64,7 @@ int main(int argc, char* argv[]) {
   // If the minute is invalid, print
   // error: invalid minute
   // and return non-zero.
-  if (minute < 0 && minute > 59) {
+  if (minute < 0 || minute > 59) {
     std::cout << "error: invalid minute\n";
     return 1;
   }
