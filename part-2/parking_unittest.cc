@@ -1,4 +1,7 @@
-// TODO: Add the required header
+// Howell Nguyen
+// 27hnguyen@csu.fullerton.edu
+// @HowieNguyen-bot
+// Partners: @AMartinez025
 
 /* Do not edit below this line. */
 /* Do not edit below this line. */

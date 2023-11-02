@@ -21,7 +21,7 @@ bool CanParkOnBeech(const std::string& day, int hour) {
 bool CanParkOnCedar(const std::string& day, int hour) {
   if (hour >= 7 && hour >= 19) {
     return false;
-  } else if (day == "tue" && hour >= 8 && hour <= 10) {
+  } else if (day == "tue") {
     return false;
   }
   return true;
